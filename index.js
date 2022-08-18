@@ -30,11 +30,14 @@ console.log('example task:', processFirstItem(['foo','bar'],function(str){return
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+    ~ counter1 has closure because of the returned function... the variable count is accessible to be returned... whereas in counter2 the function cannot access the variable count because it is outside of its scope.
   
   2. Which of the two uses a closure? How can you tell?
+    ~ counter1 because of the first function being returned to a function which is returned.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  
+     counter2 be better? 
+     ~ counter1 for a game lasting more than one inning.... counter2 for a very short game.
 */
 
 // counter1 code
