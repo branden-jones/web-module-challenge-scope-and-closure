@@ -61,6 +61,7 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+  A closure allows a user to do complex tasks within an ancetrial task. For instance, if i worked at a restaurant, my register needs to have nested functions for my regular use (things like ordering/pricing a burrito with a drink, etc.) workings within a much larger function to keep track of all of my sales, inventory, promotionals, etc. Every step deeper into the larger Ancestor function one goes, a new closure is created. 
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -69,6 +70,7 @@ function personalDice(name){
       // generate random number between 1 and 6
     const newRoll = Math.floor(Math.random() * 6);
     console.log(`${name} rolled a ${newRoll}`)
+    return newRoll;
   }
 }
 
@@ -82,8 +84,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+  ~ a closure is found when personalDice returns a function... when the deeper function returns a random number to then send it back up to personalDice.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+  ~ im not entirely sure what is the same... or at least not what youre asking for... when i call dansRoll it returns "Dan rolled a __" with a number of 0-6 different most times. There is an undefined inbetween each console.log for dan... but maybe that is because the closure isnt returning anything...
 c. What is the lexical scope of `newRoll`? 
+  ~ only within the  closure (inner function)... not outside of the function. unless the inner(unnamed) function returns the newRoll variable, the personalDice cannot access it
 
 
 ### Task 3 - Stretch Goals
